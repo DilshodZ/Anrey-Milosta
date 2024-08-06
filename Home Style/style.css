@@ -184,7 +184,7 @@ body {
         position: absolute;
         display: block;
         text-align: start;
-        top: 40px; left: 0px;
+        top: 0px; left: 0px;
         background-color: #fff;
         z-index: 100;
         transform: translateX(-700px);
