@@ -1,2 +1,2 @@
 console.log("Hello World!");
-alert("Silar 0 silar!!!")
+alert("Silar zo'r silaaaaaaaaaaa!!!")
