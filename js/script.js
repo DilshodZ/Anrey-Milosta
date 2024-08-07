@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 /*/navbar*/
 
@@ -155,3 +157,4 @@ console.log("Hello World!");
 alert("Silar zo'r silaaaaaaaaaaa!!!")
 alert("Silar zo'r silaaaaaaaaa!!!")
 
+>>>>>>> e2d6676ce48c5ec29d73cb2894adc50dac7d43b3

@@ -1,22 +1,13 @@
-/*/navbar*/
+const navbar = document.querySelector(".nav-title");
+const x = document.querySelector(".x");
+const menu = document.querySelector(".fas");
 
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-title').classList.toggle('active');
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-title').classList.toggle('active');
-        });
-    });
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        document.querySelector('.nav-title').classList.toggle('active');
-    });
-
-
-
+menu.addEventListener("click", () => {
+    navbar.classList.toggle("nav-xxx");
+})
+x.addEventListener("click", () => {
+    navbar.classList.remove("nav-xxx")
+})
 /*translate*/
 document.addEventListener('DOMContentLoaded', function() {
     const langElements = document.querySelectorAll('.lang');
@@ -87,7 +78,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll('.carousel-item');
+    const thumbs = document.querySelectorAll('.thumb-item');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
 
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+        items.forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+        });
+        thumbs.forEach((thumb, i) => {
+            thumb.classList.toggle('active', i === index);
+        });
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+        updateCarousel(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel(currentIndex);
+    });
+
+    thumbs.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel(currentIndex);
+        });
+    });
+});
 
 
 
@@ -147,3 +171,5 @@ document.addEventListener('DOMContentLoaded', function() {
   instagramIcon.addEventListener('click', () => {
     window.open('https://www.instagram.com/your_instagram_handle', '_blank');
   });
+
+
