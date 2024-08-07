@@ -50,6 +50,48 @@ document.addEventListener('DOMContentLoaded', function() {
     initialLangElement.click();
 });
 /*slayd*/
+document.addEventListener('DOMContentLoaded', () => {
+    const mainItems = document.querySelectorAll('.carousel-main .carousel-item');
+    const thumbItems = document.querySelectorAll('.carousel-thumbs .thumb-item');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+        mainItems.forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+            thumbItems[i].classList.toggle('active', i === index);
+        });
+    }
+
+    thumbItems.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel(currentIndex);
+        });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + mainItems.length) % mainItems.length;
+        updateCarousel(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % mainItems.length;
+        updateCarousel(currentIndex);
+    });
+
+    updateCarousel(currentIndex);
+});
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const mainItems = document.querySelectorAll('.carousel-main .carousel-item');
     const thumbItems = document.querySelectorAll('.carousel-thumbs .thumb-item');
@@ -91,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     showSlide(currentIndex);
 });
+
         /*footer*/
        
   // Add click event listener to the WhatsApp icon
