@@ -117,3 +117,9 @@ window.addEventListener("scroll", () => {
     } 
     
 })
+function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6Lc6MyEqAAAAACvJvzC0s49xJMBxToP0CNqvkj1U', {action: 'LOGIN'});
+    });
+  }

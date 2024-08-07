@@ -655,17 +655,19 @@
                 </div>
                 <div class="captcha-card">
                     <h4>Fill out the form</h4>
-                    <input type="text" placeholder="Your name" required> <br>
-                    <input type="number" placeholder="Your phone number"> <br>
-                    <textarea class="messag" placeholder="Your messages"></textarea>
-                    <div class="i-am">
-                        <div class="robot">
-                            <input type="checkbox">
-                            <div>I’m not a robot</div>
+                    <form action="None">
+                        <input type="text" placeholder="Your name" required> <br>
+                        <input type="number" placeholder="Your phone number" required> <br>
+                        <textarea class="messag" placeholder="Your messages" required></textarea>
+                        <div class="i-am">
+                            <div class="robot">
+                                <input type="checkbox" required>
+                                <div>I’m not a robot</div>
+                            </div>
+                            <img src="./Home img/card/capcha.png" alt="">
                         </div>
-                        <img src="./Home img/card/capcha.png" alt="">
-                    </div>
-                    <button class="capcha-btn2" type="submit">To send <img src="./Home img/card/Arrow 1.png" alt=""></button>
+                        <button class="capcha-btn2" type="submit">To send <img src="./Home img/card/Arrow 1.png" alt=""></button>
+                    </form>
                 </div>
             </div>
         </div>
