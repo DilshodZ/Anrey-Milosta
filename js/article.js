@@ -9,3 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+window.addEventListener("scroll", () => {
+    let top = window.scrollY;
+    if (top >= 200) {
+        
+    }
+})
+
