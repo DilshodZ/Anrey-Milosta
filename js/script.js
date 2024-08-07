@@ -1,3 +1,4 @@
+
 /*/navbar*/
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -147,3 +148,10 @@ const instagramIcon = document.querySelector('.fa-instagram');
 instagramIcon.addEventListener('click', () => {
 window.open('https://www.instagram.com/your_instagram_handle', '_blank');
 });
+
+
+console.log("Hello World!");
+
+alert("Silar zo'r silaaaaaaaaaaa!!!")
+alert("Silar zo'r silaaaaaaaaa!!!")
+
