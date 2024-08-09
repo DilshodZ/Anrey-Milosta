@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let nav = document.getElementById("nav")
 let bars = document.getElementById("bars")
 let fas = document.getElementById("fas")
@@ -50,15 +49,3 @@ window.addEventListener("scroll", () => {
         navbar.classList.remove('sticky')
     }
 });
-=======
-let nav = document.getElementById("nav")
-let bars = document.getElementById("bars")
-let fas = document.getElementById("fas")
-
-bars.addEventListener('click', () => {
-    nav.classList.toggle('nav-list')
-})
-fas.addEventListener('click', () => {
-    nav.classList.remove('nav-list')
-})
->>>>>>> a6bdc2960419cdc44d06e79052ef7d781c422ebe
